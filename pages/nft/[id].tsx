@@ -2,10 +2,12 @@ import React from 'react'
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
 import { sanityClient, urlFor } from '../../sanity'
 import { Collection } from '../../typings'
+import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 
 interface Props {
   collection: Collection
+  getServerSideProps: GetServerSideProps
 }
 
 function NftDropPage({ collection }: Props) {

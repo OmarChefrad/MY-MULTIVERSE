@@ -1,6 +1,7 @@
 // import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { GetServerSideProps } from 'next'
 // import Image from 'next/image '
 import { sanityClient, urlFor } from '../sanity'
 import { Collection } from '../typings'
