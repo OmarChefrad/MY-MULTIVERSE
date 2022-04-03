@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* html {
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Manrope&family=PT+Sans&display=swap');
+html {
     -webkit-tap-highlight-color: transparent;
-} */
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
