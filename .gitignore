@@ -9,7 +9,7 @@
 /coverage
 
 #sanity modules
-/sanity/node_modules
+/studio/node_modules
 
 # next.js
 /.next/
