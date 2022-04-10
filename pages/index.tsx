@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next'
 // import Image from 'next/image '
 import { sanityClient, urlFor } from '../sanity'
 import { Collection } from '../typings'
+import { motion } from 'framer-motion'
 
 interface Props {
   collections: Collection[]
@@ -12,7 +13,19 @@ interface Props {
 
 const Home = ({ collections }: Props) => {
   return (
-    <div className="mx-auto flex min-h-screen max-w-7xl select-none flex-col items-center justify-center px-3 2xl:px-0">
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={{
+        initial: {
+          opacity: 0,
+        },
+        animate: {
+          opacity: 1,
+        },
+      }}
+      className="mx-auto flex min-h-screen max-w-7xl select-none flex-col items-center justify-center px-3 2xl:px-0"
+    >
       <Head>
         <title>MY MULTIVERSE</title>
         <link
@@ -20,7 +33,7 @@ const Home = ({ collections }: Props) => {
           href="https://lh3.googleusercontent.com/zFvIdh-DTK1ZwlPgyrGm1Wm_2wcw5_SchSPcT40sqvAv67VvO5SwCruvVYkjhnLA0b07bDNbmWnKPJfE2NhqOhEBRGhh4D3mhzj_HQ=w600"
         />
       </Head>
-      <header className="items-centre flex justify-between pb-20">
+      <header className="items-centre flex justify-between pb-20 backdrop-blur-3xl">
         <h1 className="w-full cursor-pointer text-3xl font-extralight sm:w-full lg:text-4xl">
           <span className="font-extrabold  underline decoration-rose-400">
             NFT'S
@@ -35,7 +48,7 @@ const Home = ({ collections }: Props) => {
               <div className="flex cursor-pointer flex-col items-center py-4 transition-all duration-300 hover:scale-105">
                 <img
                   className="w-85 shadow-rose-500'h-96 rounded-2xl object-cover shadow-xl"
-                  src={urlFor(collection.mainImage).url()}
+                  src={urlFor(collection.previewImage).url()}
                   alt=""
                 />
                 <div className="p-1">
@@ -54,7 +67,7 @@ const Home = ({ collections }: Props) => {
           ))}
         </div>
       </main>
-    </div>
+    </motion.div>
   )
 }
 
