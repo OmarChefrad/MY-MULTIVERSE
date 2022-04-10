@@ -174,7 +174,7 @@ function NftDropPage({ collection }: Props) {
         {/* content */}
         <div className="mt-10 flex flex-1 flex-col  items-center space-y-7 rounded-xl text-center lg:justify-center lg:space-y-0 ">
           <img
-            className="pd-10 lg:h-90 w-100 rounded-xl object-cover lg:py-20"
+            className="pd-10 lg:h-90 lg:w-50 object-cover lg:py-20"
             src={urlFor(collection.mainImage).url()}
             alt=""
           />
@@ -199,8 +199,8 @@ function NftDropPage({ collection }: Props) {
         {/* Mint button */}
         <div className="py-4">
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 1 }}
             onClick={minNft}
             disabled={
               loaded || claimedSupply === totalSupply?.toNumber() || !adress

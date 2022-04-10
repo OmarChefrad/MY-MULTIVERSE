@@ -30,7 +30,7 @@ const Home = ({ collections }: Props) => {
         <title>MY MULTIVERSE</title>
         <link
           rel="icon"
-          href="https://lh3.googleusercontent.com/zFvIdh-DTK1ZwlPgyrGm1Wm_2wcw5_SchSPcT40sqvAv67VvO5SwCruvVYkjhnLA0b07bDNbmWnKPJfE2NhqOhEBRGhh4D3mhzj_HQ=w600"
+          href="https://res.cloudinary.com/adonis1/image/upload/v1649611094/STOOLED-modified_trohmc.png"
         />
       </Head>
       <header className="items-centre flex justify-between pb-20 backdrop-blur-3xl">
