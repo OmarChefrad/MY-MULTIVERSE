@@ -74,9 +74,6 @@ function NftDropPage({ collection }: Props) {
         const claimedTokenid = tx[0].id
         const claimedNFT = await tx[0].data()
 
-        console.log(receipt)
-        console.log(claimedTokenid)
-        console.log(claimedNFT)
 
         toast('Congrats 👏... You minted your NFT', {
           duration: 7000,
